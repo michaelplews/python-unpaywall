@@ -1,0 +1,13 @@
+# Config file for automatic testing at travis-ci.org
+
+language: python
+python:
+  - 3.6
+  - 3.5
+  - 3.4
+
+install:
+  - pip install -e .[dev]
+
+script:
+  - py.test --doctest-modules --cov=python_unpaywall src tests
